@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>Car-catalog</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>Car-catalog</name>
 	<description>Car catalog</description>
 	<properties>

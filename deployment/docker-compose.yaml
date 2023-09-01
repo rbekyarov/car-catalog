@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_bin', '--default-authentication-plugin=mysql_native_password']
+    environment:
+      - MYSQL_ROOT_PASSWORD=Aa@153759
+      - MYSQL_DATABASE=car_catalog
+  carcatalog:
+      image: rbekyarov/carcatalog:v3
+      depends_on: [mysql]
+      ports:
+        - "8080:8080"
+      environment:
+        - MYSQL_HOST=mysql
+        - MYSQL_USER=root
+        - MYSQL_PASS=Aa@153759
